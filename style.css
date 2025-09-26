@@ -58,49 +58,50 @@ nav .button {
 #hero {
     display: flex;
     align-items: center;
-    padding: 4rem 5%;
+    padding: 5rem 5%;
     background-color: #f9f9f9;
+    gap: 2rem;
 }
 
 .hero-content {
-    flex: 1;
+    flex: 1.2; /* Give text slightly more space */
     padding-right: 2rem;
 }
 
-.hero-content .tagline {
-    color: #e6a800; /* Gold */
-    font-weight: bold;
-    background-color: #fff0c7;
-    padding: 0.3rem 0.6rem;
-    border-radius: 5px;
-    display: inline-block;
-}
-
 .hero-content h1 {
-    font-size: 3rem;
-    margin: 1rem 0;
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin: 0 0 1rem 0;
+    color: #1a2c4e;
 }
 
-.hero-content .button {
-    background-color: #ffffff;
-    color: #333;
-    padding: 0.8rem 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 1rem;
-}
-
-.hero-features {
-    margin-top: 2rem;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.hero-features span {
-    font-weight: 500;
+.sub-headline {
+    font-size: 1.2rem;
     color: #555;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.button.primary-cta {
+    background-color: #e6a800; /* Gold */
+    color: #1a2c4e;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: 2px solid #e6a800;
+}
+
+.button.secondary-cta {
+    background-color: transparent;
+    color: #1a2c4e;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: 2px solid #1a2c4e;
 }
 
 .hero-image {
@@ -112,135 +113,305 @@ nav .button {
     border-radius: 10px;
 }
 
-/* Services Section */
-#services {
+/* Readiness Quiz Section */
+#readiness-quiz {
     padding: 4rem 5%;
-    text-align: center;
+    background-color: #ffffff;
 }
 
-#services h2 {
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #eaeaea;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.quiz-container h2 {
     font-size: 2.5rem;
 }
 
-.service-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+.quiz-question {
+    margin-bottom: 2rem;
     text-align: left;
 }
 
-.card {
-    background-color: #ffffff;
-    border: 1px solid #eaeaea;
-    border-radius: 10px;
-    padding: 2rem;
+.quiz-question label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
 }
 
-.card.popular {
-    border-top: 5px solid #e6a800; /* Gold */
-}
-
-.card h3 {
-    font-size: 1.5rem;
-}
-
-.card ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 1rem;
-}
-
-.card li {
-    margin-bottom: 0.5rem;
-}
-
-/* About Section */
-#about {
+.quiz-question .options {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.quiz-question .options button {
+    flex-grow: 1;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.quiz-question .options button:hover {
+    background-color: #e6a800;
+    color: #1a2c4e;
+    border-color: #e6a800;
+}
+
+/* Meet the Architects Section */
+#meet-the-architects {
     padding: 4rem 5%;
+    text-align: center;
     background-color: #f9f9f9;
 }
 
-.about-image {
-    flex: 1;
+#meet-the-architects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
 }
 
-.about-image img {
-    width: 100%;
+.architects-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.architect-profile {
+    flex: 1;
+    text-align: center;
+}
+
+.architect-profile img {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.architect-profile h4 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.architect-profile .title {
+    font-weight: bold;
+    color: #e6a800; /* Gold */
+    margin-bottom: 1rem;
+}
+
+.architect-profile .bio {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Unseen Risks Section */
+#unseen-risks {
+    padding: 4rem 5%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#unseen-risks h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.risks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.risk-card {
+    background-color: #fff5f5; /* Light Red */
+    border: 1px solid #fcc; /* Red */
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: left;
+}
+
+.risk-card h4 {
+    font-size: 1.5rem;
+    color: #c00;
+}
+
+.what-if {
+    margin-top: 1rem;
+}
+
+.what-if-prompt {
+    font-weight: bold;
+    cursor: pointer;
+    color: #c00;
+}
+
+.what-if-content {
+    display: none; /* Hidden by default */
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-style: italic;
+}
+
+.what-if:hover .what-if-content {
+    display: block; /* Show on hover */
+}
+
+/* Blueprint Process Section */
+#blueprint-process {
+    padding: 4rem 5%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#blueprint-process h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.process-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.process-step {
+    position: relative;
+    padding: 2rem;
+    background: #ffffff;
     border-radius: 10px;
 }
 
-.about-content {
-    flex: 1;
-    padding-left: 3rem;
-}
-
-.about-content h2 {
-    font-size: 2.5rem;
-}
-
-.feature-list {
-    margin-top: 2rem;
-}
-
-.feature {
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    background-color: #e6a800; /* Gold */
+    color: #1a2c4e;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #f9f9f9;
 }
 
-.icon-placeholder {
+.process-step h4 {
     font-size: 1.5rem;
-    color: #005a9e;
+    margin-top: 20px; /* Space for the number */
 }
 
-.feature h4 {
-    margin: 0 0 0.5rem 0;
-}
-
-/* Case Study Section */
-#case-study {
+/* Verifiable Impact (Testimonials) Section */
+#verifiable-impact {
     padding: 4rem 5%;
     text-align: center;
 }
 
-#case-study h2 {
+#verifiable-impact h2 {
     font-size: 2.5rem;
+    margin-bottom: 3rem;
 }
 
-.case-study-content {
+.testimonials-container {
     display: flex;
     gap: 2rem;
-    margin-top: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 5px solid #e6a800; /* Gold */
+}
+
+.testimonial-card img {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card .quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-card .author {
+    font-weight: bold;
+    color: #1a2c4e;
+}
+
+.linkedin-verify {
+    font-size: 0.9rem;
+    color: #0077b5; /* LinkedIn Blue */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Specialist Edge Section */
+#specialist-edge {
+    padding: 4rem 5%;
+    background-color: #1a2c4e; /* Dark Blue */
+    color: #ffffff;
+    text-align: center;
+}
+
+#specialist-edge h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.edge-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
     text-align: left;
 }
 
-.crisis, .solution {
-    flex: 1;
-    padding: 2rem;
-    border-radius: 10px;
-}
-
-.crisis {
-    background-color: #fff5f5; /* Light Red */
-    border: 1px solid #fcc; /* Red */
-}
-
-.solution {
-    background-color: #f0f9ff; /* Light Blue */
-    border: 1px solid #bde0fe; /* Blue */
-}
-
-.crisis h3, .solution h3 {
+.edge-point h4 {
+    color: #e6a800; /* Gold */
     font-size: 1.5rem;
 }
 
-.case-study-footer {
-    margin-top: 2rem;
-    font-style: italic;
+
+/* What Happens Next Section */
+#what-happens-next {
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+#what-happens-next h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.next-step-content {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
 }
 
 /* CTA Section */
@@ -298,4 +469,23 @@ nav .button {
     text-align: center;
     padding-top: 2rem;
     font-size: 0.9rem;
+}
+
+/* Affiliations Section */
+#affiliations {
+    background-color: #f9f9f9;
+    padding: 1.5rem 5%;
+}
+
+.affiliations-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.affiliations-container span {
+    font-weight: bold;
+    color: #555;
 }
