@@ -130,6 +130,20 @@ header nav a:hover {
     color: var(--lime);
 }
 
+/* Experts Section - Single Profile */
+#experts .expert-profile {
+    max-width: 700px;
+    margin: 2rem auto 0;
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+#experts .expert-profile h4 {
+    color: var(--lime);
+    margin-bottom: 1rem;
+}
+
 /* Testimonials Section */
 #testimonials .testimonial-item {
     border-bottom: 1px solid var(--border-color);
